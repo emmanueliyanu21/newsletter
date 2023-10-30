@@ -1,38 +1,177 @@
-.App {
+.attribution {
+  font-size: 11px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --tomato: hsl(4, 100%, 67%);
+  --light-tomato: hsl(3, 100%, 93%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: var(--charcoal-grey);
+  font-family: "Roboto", sans-serif;
+}
+
+.content-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.newsletter {
+  display: flex;
+  max-width: 100%;
+  border-radius: 25px;
+  padding: 20px;
+  background-color: var(--white);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.newsletter-wrapper {
+  padding: 10px 40px 10px 20px;
+  display: block;
+  position: relative;
+}
+
+.newsletter-message {
+  display: none;
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 30px 40px;
+  max-width: 250px;
+  width: 100%;
+}
+
+.newsletter-message p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--grey);
+}
+
+.newsletter-message.active {
+  display: block;
+}
+
+.newsletter-wrapper h2 {
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  color: var(--dark-slate-grey);
+  margin-bottom: 10px;
+}
+
+.newsletter-wrapper p {
+  font-family: Roboto, sans-serif;
+  line-height: 1.6;
+  font-size: 12px;
+  max-width: 300px;
+  color: var(--grey);
+  padding-bottom: 6px;
+}
+
+.newsletter-wrapper ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.newsletter-wrapper ul li {
+  font-size: 12px;
+  max-width: 350px;
+  font-family: Roboto, sans-serif;
+  color: var(--grey);
+  line-height: 2;
+}
+
+.newsletter-wrapper ul li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  justify-content: flex-start;
+}
+
+.newsletter-email-address label {
+  font-size: 10px;
+  font-family: Roboto, sans-serif;
+  color: var(--charcoal-grey);
+  display: block;
+  padding-bottom: 5px;
+}
+
+.newsletter-email-address input {
+  border: 1px solid var(--grey);
+  border-radius: 6px;
+  padding: 12px;
+  display: block;
+  max-width: 275px;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: var(--grey);
+}
+
+.newsletter-email-address {
+  padding-top: 10px;
+}
+
+.newsletter-email-address span {
+  font-size: 10px;
+  color: var(--tomato);
+  font-weight: 600;
+}
+
+.text-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.newsletter-email-address input:hover {
+  cursor: pointer;
+}
+
+.newsletter-email-address input:focus {
+  outline: none !important;
+  border: 1px solid var(--tomato);
+}
+
+.error {
+  border: 1px solid var(--tomato)!important;
+  color: var(--tomato)!important;
+  background-color: var(--light-tomato);
+}
+
+.error::placeholder {
+  color: var(--tomato) 
+}
+
+
+.button {
+  display: block;
+  max-width: 325px;
+  width: 100%;
+  background-color: var(--charcoal-grey);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0px;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--tomato);
+}
+
+.newsletter-image img {
+  max-height: 50vh;
 }
