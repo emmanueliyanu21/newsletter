@@ -45,10 +45,6 @@ function App() {
     setMessageActive(false);
   };
 
-  function Greetings(props){
-    return <h1>Welcome to {props.name}</h1>
-  }
-
   return (
     <>
       <div className="content-wrapper">
